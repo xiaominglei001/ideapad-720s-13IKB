@@ -1,5 +1,5 @@
 # ideapad-720s-13IKB
-我买的日版机，CPU是i5 8250u,其它参数网上查询，所有文件来自https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
+我买的日版机，CPU是i5 8250u，其它参数网上查询，所有文件来自https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
 
 ### 使用方法：
 替换原来安装U盘及系统盘的EFI文件即可。
