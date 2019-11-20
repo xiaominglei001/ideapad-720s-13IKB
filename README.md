@@ -1,9 +1,9 @@
 # ideapad-720s-13IKB
-我买的日版机，CPU是i5 8250u，其它参数网上查询，所有文件来自https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
+我买的日版机，CPU是i5 8250u，其它参数可看鲁大师导出的配置单，所有文件来自https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
 
 ### 使用方法：
 用黑果小兵提供的10.15.1镜像，刻录一个安装盘，用此处的EFI替换安装U盘里的EFI，然后安装系统。
-系统安装完成后，用此处的EFI替换系统盘里的EFI，即可脱离u盘启动。
+系统安装完成后，用此处的EFI替换系统盘里的EFI，即可脱离u盘启动。然后改config.plist里改声卡layoutid为22。
 
 ### 可用项目
 1. 触摸板已驱动
