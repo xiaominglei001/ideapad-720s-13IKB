@@ -1,5 +1,5 @@
 # ideapad-720s-13IKB
-我买的日版机，CPU是i5 8250u，其它参数可看鲁大师导出的配置单，所有文件来自https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
+我买的日版机，CPU是i5 8250u，其它参数可看鲁大师导出的配置单，所有文件来自作者dragonflylee的  https://github.com/dragonflylee/Yoga-730-hackintosh  我只改了layoutid为22，并去掉了原项目里我暂时用不到的opencore文件。
 
 ### 使用方法：
 用黑果小兵提供的10.15.1镜像，刻录一个安装盘，用此处的EFI替换安装U盘里的EFI，然后安装系统。
@@ -26,11 +26,18 @@
 
 ### 20191119关于网卡更新
 鉴于USB网卡占用宝贵的USB口，我最终还是买了dw1820a，但是系统就是识别不出来，无论win下还是mac下，开始以为是网卡问题，就又买了bcm94360cs2加仕和技术的m2转苹果网卡那个延长线，把电池拿下来去掉扬声器，可以很好的放入这个网卡，反正扬声器几乎不用，但是遇到同样的问题，依然无论win还是mac都识别不到，后来群里有人说换网卡前要先屏蔽wifi，我就先bios里屏蔽wifi进系统，然后再解开屏蔽进系统，居然成功识别出来了，bcm94360cs2直接免驱，可以把相关驱动删了(AirportBrcmFixup.kext、
-BT4LEContinuityFixup.kext、BrcmBluetoothInjector.kext)，可能有些人需要，所以仓库里我没去除，另外，dw1820a应该也是一样需要先bios屏蔽才识别吧，拆装比较麻烦就没再试了。
+BT4LEContinuityFixup.kext、BrcmBluetoothInjector.kext)，可能有些人需要，所以仓库里我没去除，另外，dw1820a应该也是一样需要先bios屏蔽才识别吧，拆装比较麻烦就没再试dw1820a了。
 
 ### 20191120关于触摸板bug修复
 
-仔细读了官方文档 https://voodooi2c.github.io 发现官方文档写的还是很清晰的，终于有点明白了，然后对照着https://github.com/dragonflylee/Yoga-730-hackintosh 原来的EFI，发现作者没有修改DSDT貌似，只是热补丁修改SSDT，当然这两者具体关系我也不太懂。所以现在的问题是我要按voodooi2c官方文档要求修复一份DSDT放进去，然后我又想到这个作者 https://github.com/FuckDoctors/ideapad-720s-13IKB  在issue里说他的DSDT只修改了触摸板和调节亮度的部分，我把他的DSDT.dsl下载下来搜触摸板bios设备名：TPD0，然后找到他所有为voodooi2c打补丁的地方，挪到我自己提取的本机的DSDT里，然后编译，导出aml，放到我patch里，然后就成功了，不再出现停五分钟不用无响应的问题。至于为什么一开始不用FuckDoctors的EFI，因为一加载就ACPI错误，然后就一直没用。至于如何导出编译本机DSDT可以参考这里：http://bbs.pcbeta.com/viewthread-1571455-1-1.html  另外，我上传的DSDT里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext  可以自己对比查看。
+#### 分析问题
+仔细读了官方文档 https://voodooi2c.github.io 发现官方文档写的还是很清晰的，终于有点明白了，然后对照着dragonflylee原来的EFI，发现作者没有修改DSDT貌似，只是热补丁修改SSDT，当然这两者具体关系我也不太懂。所以现在的问题是我要按voodooi2c官方文档要求修复一份DSDT放进去，然后我又想到这个作者FuckDoctors（ 他EFI地址 https://github.com/FuckDoctors/ideapad-720s-13IKB ） 在issue里说他的DSDT只修改了触摸板和调节亮度的部分，就想可以参照着他的改。
+
+#### 修复步骤
+我把FuckDoctors的DSDT.dsl下载下来搜触摸板bios设备名：TPD0，然后找到他所有为voodooi2c打补丁的地方（作者用zhbchwin注释了这里地方），把需要的代码挪到我自己提取的本机的DSDT里，然后编译，导出aml，放到我patch里，然后就成功了，不再出现停五分钟不用无响应的问题。
+
+```
+至于为什么一开始不用FuckDoctors的EFI，因为一加载就ACPI错误黑屏，可能他没用热补丁或者我机器DSDT和他的差别大，然后就一直没用。至于如何导出编译本机DSDT可以参考这里：http://bbs.pcbeta.com/viewthread-1571455-1-1.html  另外，我上传的DSDT里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用这个文件应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决。
+```
 
 
-https://github.com/FuckDoctors/ideapad-720s-13IKB
