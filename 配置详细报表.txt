@@ -1,0 +1,238 @@
+--------[ 鲁大师 ]--------------------------------------------------------------------------------
+
+  软件:             鲁大师 5.1019.1095.1011
+  时间:             2019-11-20 02:19:06
+  网站:             http://www.ludashi.com
+
+--------[ 概览 ]----------------------------------------------------------------------------------
+
+  电脑型号            联想 81BV 笔记本电脑
+  操作系统            Windows 10 专业版 64位 ( DirectX 12 )
+
+  处理器              英特尔 Core i5-8250U @ 1.60GHz 四核
+  主板                联想 LNVNB161216 ( 7th Generation Intel Processor Family I/O - 9D4E 笔记本芯片组 )
+  显卡                英特尔 UHD Graphics 620 ( 128 MB / 联想 )
+  内存                8 GB ( SK Hynix )
+  主硬盘              微软 虚拟磁盘 ( 42 GB )
+  显示器              夏普 SHP1447 ( 13.3 英寸  )
+  声卡                瑞昱  @ 英特尔 High Definition Audio 控制器
+  网卡                Bluetooth Device (Personal Area Network)
+
+--------[ 主板 ]----------------------------------------------------------------------------------
+
+  主板型号            联想 LNVNB161216
+  芯片组              7th Generation Intel Processor Family I/O - 9D4E 笔记本芯片组
+  BIOS版本            6MCN18WW  /  BIOS程序发布日期: 11/24/2017
+
+
+--------[ 处理器 ]--------------------------------------------------------------------------------
+
+  处理器              英特尔 Core i5-8250U @ 1.60GHz 四核
+  速度                1.80 GHz (100 MHz x 18.0)
+  处理器数量          核心数: 4 / 线程数: 8
+  插槽/插座           U3E1
+  一级数据缓存        4 x 32 KB, 8-Way, 64 byte lines
+  一级代码缓存        4 x 32 KB, 8-Way, 64 byte lines
+  二级缓存            4 x 256 KB, 4-Way, 64 byte lines
+  三级缓存            6 MB, 12-Way, 64 byte lines
+  特征                MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, HTT, EM64T, EIST, Turbo Boost
+
+--------[ 硬盘 ]----------------------------------------------------------------------------------
+
+
+--------[ 内存 ]----------------------------------------------------------------------------------
+
+
+--------[ 显卡 ]----------------------------------------------------------------------------------
+
+  主显卡              英特尔 UHD Graphics 620
+  显存                128 MB
+  制造商              联想
+  制造商              Intel
+  驱动版本            24.20.100.6287
+  驱动日期            20180815
+
+--------[ 显示器 ]--------------------------------------------------------------------------------
+
+  产品                夏普 SHP1447
+  厂商                夏普
+  固件程序日期        2015 年 45 周 (非显示器制造日期)
+  屏幕尺寸            13.3 英寸 (29 厘米 x 17 厘米)
+  显示比例            宽屏 16 : 9
+  分辨率              1920 x 1080 32 位真彩色
+  Gamma               2.20
+  最大分辨率          1920 x 1080
+
+--------[ 其他设备 ]------------------------------------------------------------------------------
+
+
+  网卡                Bluetooth Device (Personal Area Network)
+
+  声卡                瑞昱  @ 英特尔 High Definition Audio 控制器
+
+  键盘                PS/2 标准键盘
+  鼠标                HID-compliant 鼠标
+
+  摄像头              EasyCamera
+
+--------[ PCI设备 ]-------------------------------------------------------------------------------
+
+  设备                Xeon E3 - 1200 v6/7th Gen Intel Core Host Bridge/DRAM Registers - 5914
+  设备ID              5914
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to HOST
+  子系统制造商        Lenovo
+  子系统ID            380617AA
+
+  设备                UHD Graphics 620
+  设备ID              5917
+  制造商              Intel
+  制造商ID            8086
+  类别                Display / VGA
+  子系统制造商        Lenovo
+  子系统ID            39AF17AA
+
+  设备                Dynamic Platform and Thermal Framework Processor Participant
+  设备ID              1903
+  制造商              Intel
+  制造商ID            8086
+  类别                Data Aquisition & Signal Processing / Other
+  子系统制造商        Lenovo
+  子系统ID            380C17AA
+
+  设备                Xeon E3 - 1200/1500 v5/6th Gen Intel Core Gaussian Mixture Model - 1911
+  设备ID              1911
+  制造商              Intel
+  制造商ID            8086
+  类别                System / Other
+  子系统制造商        Lenovo
+  子系统ID            383417AA
+
+  设备                USB 3.0 可扩展主机控制器 - 1.0 (Microsoft)
+  设备ID              9D2F
+  制造商              Intel
+  制造商ID            8086
+  类别                Serial / USB (UHCI)
+  子系统制造商        Lenovo
+  子系统ID            385217AA
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O Thermal subsystem - 9D31
+  设备ID              9D31
+  制造商              Intel
+  制造商ID            8086
+  类别                Data Aquisition & Signal Processing / Other
+  子系统制造商        Lenovo
+  子系统ID            384317AA
+
+  设备                Serial IO I2C Host Controller - 9D60
+  设备ID              9D60
+  制造商              Intel
+  制造商ID            8086
+  类别                Data Aquisition & Signal Processing / Other
+  子系统制造商        Lenovo
+  子系统ID            384717AA
+
+  设备                Serial IO I2C Host Controller - 9D61
+  设备ID              9D61
+  制造商              Intel
+  制造商ID            8086
+  类别                Data Aquisition & Signal Processing / Other
+  子系统制造商        Lenovo
+  子系统ID            384417AA
+
+  设备                Management Engine Interface
+  设备ID              9D3A
+  制造商              Intel
+  制造商ID            8086
+  类别                Simple Communication / Other
+  子系统制造商        Lenovo
+  子系统ID            385117AA
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O PCI Express Root Port #4 - 9D13
+  设备ID              9D13
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O PCI Express Root Port #5 - 9D14
+  设备ID              9D14
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O PCI Express Root Port #9 - 9D18
+  设备ID              9D18
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to PCI
+  子系统ID            00000000
+
+  设备                Mobile 7th Generation Intel Processor Family I/O LPC Controller  - 9D4E
+  设备ID              9D4E
+  制造商              Intel
+  制造商ID            8086
+  类别                Bridge / PCI to ISA
+  子系统制造商        Lenovo
+  子系统ID            381417AA
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O PMC - 9D21
+  设备ID              9D21
+  制造商              Intel
+  制造商ID            8086
+  类别                Memory / Other
+  子系统制造商        Lenovo
+  子系统ID            385417AA
+
+  设备                High Definition Audio 控制器
+  设备ID              9D71
+  制造商              Intel
+  制造商ID            8086
+  类别                Multimedia / Hi-definition Audio
+  子系统制造商        Lenovo
+  子系统ID            381817AA
+
+  设备                Mobile 6th/7th Generation Intel Processor Family I/O SMBUS - 9D23
+  设备ID              9D23
+  制造商              Intel
+  制造商ID            8086
+  类别                Serial / SMBus Controller
+  子系统制造商        Lenovo
+  子系统ID            385017AA
+
+--------[ USB设备 ]-------------------------------------------------------------------------------
+
+  制造商ID            06CB
+  产品ID              0081
+  类别                255 / 16 / 255
+  设备                 
+  版本                USB 2.0
+
+  制造商ID            04F2
+  产品ID              B5DA
+  类别                239 / 2 / 1
+  设备                 
+  版本                USB 2.0
+
+  制造商ID            0A5C
+  产品ID              6412
+  类别                255 / 1 / 1
+  设备                 
+  版本                USB 2.0
+
+  制造商ID            152D
+  产品ID              0583
+  类别                0 / 0 / 0
+  设备                JMicron USB3.1 NVME DISK
+  Serial              0123456789ABC
+
+--------[ 传感器 ]--------------------------------------------------------------------------------
+
+  名称                CommonEC CommonEC
+  CPU温度             38℃
+  CPU核心             37℃
+  CPU封装             38℃
+  硬盘温度            26℃
+
