@@ -36,7 +36,7 @@ BT4LEContinuityFixup.kext、BrcmBluetoothInjector.kext)，可能有些人需要�
 #### 修复步骤
 大致步骤：我把FuckDoctors的DSDT.dsl下载下来搜触摸板bios设备名：TPD0，然后找到他所有为voodooi2c打补丁的地方（作者用zhbchwin注释了这里地方），把需要的代码挪到我自己提取的本机的DSDT里，然后编译导出aml，放到我patch里，然后就成功了，不再出现停五分钟不用无响应的问题。至于为什么一开始不用FuckDoctors的EFI，因为一加载就ACPI错误黑屏，可能他没用热补丁或者我机器DSDT和他的差别大，然后就一直没用。至于如何导出编译本机DSDT可以参考这里：http://bbs.pcbeta.com/viewthread-1571455-1-1.html  。
 
-具体操作中遇到的问题：我把我反编译出的DSDT.dsl用工具MaciASL打开点编译时，发现里面只有一种错误：Firmware Error (ACPI): Failure looking up，我把它们全删掉，重新编译成功，然后即可以对DSDT做修改了。我上传的DSDT里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 有需要修改的可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用这个文件只用已有的热补丁的话应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决，用别人的DSDT很可能进不去系统。
+具体操作中遇到的问题：我把我反编译出的DSDT.dsl用工具MaciASL打开点编译，发现里面只有一种错误：Firmware Error (ACPI): Failure looking up，我把它们全删掉，重新编译成功，然后就可以对DSDT做修改了。我上传的DSDT里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 有需要修改自己DSDT的可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用我的DSDT只用已有的热补丁的话应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决，用别人的DSDT很可能进不去系统。
 
 
 
