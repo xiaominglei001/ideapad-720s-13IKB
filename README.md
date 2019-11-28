@@ -12,7 +12,7 @@
 3. 亮度快捷键可调
 4. 声卡正常
 5. 显卡正常
-6. 自带网卡蓝牙暂时不管，需更换才行，目前暂用的USB迷你网卡comfast cf-811ac，官方提供驱动安装包，点击安装即可。
+6. 自带网卡蓝牙暂时不管，需更换才行，原作者描述提供了对 DW1560/DW1820A的支持。目前我暂用的USB迷你网卡comfast cf-811ac，官方提供驱动安装包，双击安装即可。
 7. 雷电口没设备暂时没设备测
 
 
@@ -34,9 +34,9 @@ BT4LEContinuityFixup.kext、BrcmBluetoothInjector.kext)，可能有些人需要�
 仔细读了官方文档 https://voodooi2c.github.io 发现官方文档写的还是很清晰的，终于有点明白了，总的来说就是先打对DSDT打补丁再根据自己触摸设备需要调整GPIO Pinning，然后我看了下dragonflylee原来的EFI，发现作者没有修改DSDT貌似，只是热补丁修改SSDT，当然这两者具体关系我也不太懂。所以现在的问题是我要按voodooi2c官方文档要求修复一份DSDT放进去，然后我又想到这个作者FuckDoctors（ 他EFI地址 https://github.com/FuckDoctors/ideapad-720s-13IKB ） 在issue里说他的DSDT只修改了触摸板和调节亮度的部分，就想可以参照着他的改。
 
 #### 修复步骤
-大致步骤：我把FuckDoctors的DSDT.dsl下载下来搜触摸板bios设备名：TPD0，然后找到他所有为voodooi2c打补丁的地方（作者用zhbchwin注释了这里地方），把需要的代码挪到我自己提取的本机的DSDT里，然后编译导出aml，放到我patch里，然后就成功了，不再出现停五分钟不用无响应的问题。至于为什么一开始不用FuckDoctors的EFI，因为一加载就ACPI错误黑屏，可能他没用热补丁或者我机器DSDT和他的差别大，然后就一直没用。至于如何导出编译本机DSDT可以参考这里：http://bbs.pcbeta.com/viewthread-1571455-1-1.html  。
+大致步骤：我把FuckDoctors的DSDT.dsl下载下来搜触摸板bios设备名：TPD0，然后找到他所有为voodooi2c打补丁的地方（作者还用zhbchwin注释了这里地方）以待使用，然后我在Clover界面按F4提取我自己的文件，然后用iasl反编译，反编译时只把DSDT和SSDT开头的文件放到同一个文件夹里去反编译,否则反编译时报错，因为其它文件反编译不了，之后再用maciasl修改反编译后的DSDT.dsl，参照FuckDoctors的DSDT.dsl把需要的代码挪到我自己的DSDT.dsl里，然后编译导出DSDT.aml，放到我patch里，然后就成功了，不再出现停五分钟不用无响应的问题。至于为什么一开始不用FuckDoctors的EFI，因为一加载就ACPI错误黑屏，可能他没用热补丁或者我机器DSDT和他的差别大，然后就一直没用。至于更详细的导出编译本机DSDT方法可以参考这里：http://bbs.pcbeta.com/viewthread-1571455-1-1.html  。
 
-具体操作中遇到的问题：我把我反编译出的DSDT.dsl用工具MaciASL打开点编译，发现里面只有一种错误：Firmware Error (ACPI): Failure looking up，我把它们全删掉，重新编译成功，然后就可以对DSDT做修改了。我上传的DSDT里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 有需要修改自己DSDT的可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用我的DSDT只用已有的热补丁的话应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决，总之，用别人的DSDT很可能进不去系统。
+具体操作中遇到的问题：我把我反编译出的DSDT.dsl用工具MaciASL打开点编译，发现里面只有一种错误：Firmware Error (ACPI): Failure looking up....，我参照FuckDoctors的DSDT.dsl把它们全删掉，重新编译成功，然后就可以对DSDT.dsl做修改了。我上传的DSDT.aml里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 有需要修改自己DSDT的可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用我的DSDT只用已有的热补丁的话应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决，总之，用别人的DSDT很可能进不去系统。
 
 
 
