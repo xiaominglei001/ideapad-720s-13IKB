@@ -39,4 +39,4 @@ BT4LEContinuityFixup.kext、BrcmBluetoothInjector.kext)，可能有些人需要�
 具体操作中遇到的问题：我把我反编译出的DSDT.dsl用工具MaciASL打开点编译，发现里面只有一种错误：Firmware Error (ACPI): Failure looking up....，我参照FuckDoctors的DSDT.dsl把它们全删掉，重新编译成功，然后就可以对DSDT.dsl做修改了。我上传的DSDT.aml里对针对触摸板修改的地方都已加上了注释：patches for VoodooI2C.kext 有需要修改自己DSDT的可以自己对比查看。 如果谁用我的DSDT进不去系统，可以先把我patch下的DSDT删除，不用我的DSDT只用已有的热补丁的话应该百分之九十能进去系统，如果发现触摸板有同样问题，可以再提取自己本机的DSDT做修改解决，总之，用别人的DSDT很可能进不去系统。
 
 
-
+我的文件地址：https://github.com/xiaominglei001/ideapad-720s-13IKB
