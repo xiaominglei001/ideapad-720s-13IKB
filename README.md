@@ -1,5 +1,5 @@
 ##  ideapad-720s-13IKB
-我买的日版机，CPU是i5 8250u，其它参数可看鲁大师导出的配置单，大部分文件来自作者dragonflylee的   https://github.com/dragonflylee/Yoga-730-hackintosh
+我买的日版机，CPU是i5 8250u，其它参数可看鲁大师导出的配置单，大部分文件来自作者dragonflylee的仓库   https://github.com/dragonflylee/Yoga-730-hackintosh
 
 ###  重点使用方法：
 1. 用黑果小兵提供的10.15.3镜像，刻录一个安装盘，用此处的EFI替换安装U盘里的EFI，然后可以用此盘来安装系统。
