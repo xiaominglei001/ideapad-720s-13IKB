@@ -5,7 +5,7 @@
 1. 用黑果小兵提供的10.15.3镜像，刻录一个安装盘，用此处的EFI替换安装U盘里的EFI，然后可以用此盘来安装系统。
 2. bios设置参考原作者的，Disable Security -> Intel SGX -> Intel SGX Controller   Disable Security -> Secure Boot  Switch RAID to AHCI in Configuration -> SATA Controller Mode，720s有的选项就照他的改。注意进入bios方法，冷启动后快速连按F2。
 3. 系统安装时最好把硬盘格式化为APFS格式GUID分区，找不到硬盘的在硬盘工具左上方切换为“显示所有设备”，安装完成后，再用此处的EFI替换系统盘里的EFI，关机拔掉U盘，开机设置启动顺序从系统盘启动，即可脱离u盘启动。注意开机顺序的问题，如果设置错了可能出现enumerating for asix usb dongle...等，这时可以重置bios之后再重新设置。
-4. 发现问题根据需要再改config.plist，如声卡layoutid。
+4. 发现问题根据需要再改config.plist，如声卡layoutid。可能值为 3, 11, 13, 21, 22, 28, 29, 30, 32, 47, 66, 72, 99。
 
 
 
